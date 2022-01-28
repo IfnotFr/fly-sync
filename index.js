@@ -1,7 +1,5 @@
 require('./bootstrap')
 const utils = require('./src/Utils')
-const fmd5 = require('md5-file')
-const wtf = require('wtfnode')
 
 const config = require('./src/Config')
 
@@ -38,12 +36,6 @@ const Worker = require('./src/Controllers/Worker')
     input: process.stdin,
     output: process.stdout,
     terminal: false
-  })
-
-  rl.on('line', function (line) {
-    if (line === 'dump') {
-      wtf.dump()
-    }
   })
 
   utils.testing('ready')

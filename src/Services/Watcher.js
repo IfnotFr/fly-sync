@@ -1,8 +1,6 @@
 const utils = require('../Utils')
 const EventEmitter = require('eventemitter2')
-const path = require('path')
 const fs = require('fs')
-const fmd5 = require('md5-file')
 const watcher = require('@parcel/watcher')
 
 class Watcher extends EventEmitter {

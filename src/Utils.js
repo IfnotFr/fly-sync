@@ -1,4 +1,3 @@
-const path = require('path')
 const crypto = require('crypto')
 const config = require('./Config')
 const fs = require('fs')

@@ -3,7 +3,6 @@ const UploadFileMessage = require('./Messages/UploadFileMessage')
 const CreateFolderMessage = require('./Messages/CreateFolderMessage')
 const RemoveMessage = require('./Messages/RemoveMessage')
 
-const fmd5 = require('md5-file')
 const utils = require('../Utils')
 
 const debug = false
