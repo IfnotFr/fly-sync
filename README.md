@@ -1,10 +1,11 @@
 # Fly Sync (daemon) `WIP`
 
-Realtime and cross-platform (Windows, Linux, OSX) file and folders synchronisation using NodeJs.
+Realtime and cross-platform (Windows, Linux, OSX) files and folders synchronisation using NodeJs. 
+Ideal for developers who want source code synchronization between two machines.
 
-> Ideal for developers who want source code synchronization between two machines.
+*In short, it's like linux `rsync` but bilateral, cross-platform, real-time and websocket-based.*
 
-**WIP Warning** not fully battle-tested, this package may contain bugs, please do not use in production and backup your files regullary.
+> **WIP Warning** not fully battle-tested, this package may contain bugs, please do not use in production and backup your files regullary.
 
 ## Main features
 
@@ -24,7 +25,7 @@ Copy and configure `config.server.json` and start your server :
 
 ### Client
 
-Copy and configure `config.client.json` and start your server :
+Copy and configure `config.client.json` and start your client :
 
     node index.js --config=/path/to/config.client.json
 
