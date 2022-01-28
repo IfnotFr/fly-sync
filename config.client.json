@@ -1,0 +1,11 @@
+{
+  "client": true,
+  "remote": "ws://127.0.0.1:6666",
+  "temp_path": "/home/me/.fly-sync-tmp",
+  "paths": [
+    {
+      "id": "sync",
+      "path": "/home/me/client-sync"
+    }
+  ]
+}

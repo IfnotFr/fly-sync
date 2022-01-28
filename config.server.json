@@ -1,0 +1,11 @@
+{
+  "server": true,
+  "port": 6666,
+  "temp_path": "/home/me/.fly-sync-tmp",
+  "paths": [
+    {
+      "id": "sync",
+      "path": "/home/me/server-sync"
+    }
+  ]
+}
