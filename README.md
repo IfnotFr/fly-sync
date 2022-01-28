@@ -6,18 +6,45 @@ Realtime and cross-platform (Windows, Linux, OSX) file and folders synchronisati
 
 **WIP Warning** not fully battle-tested, this package may contain bugs, please do not use in production and backup your files regullary.
 
-## Main features :
+## Main features
 
-- NodeJs cli app for client and server with simple config.
-- Good transfer speed with websocket stream :
+- :v: **Easy** - NodeJs cli app for client and server with simple config.
+- :zap: **Fast** - Good transfer speed with websocket stream :
   - Multiples small files (npm packages, long nested folders ...)
   - Big files (with file streaming)
-- Multiple named folders to sync with regex exclusion
+- :bulb: **Flexible** - Multiple named folders to sync with regex exclusion
+
+## Quick start
+
+### Server
+
+Copy and configure `config.server.json` and start your server :
+
+    node index.js --config=/path/to/config.server.json
+
+### Client
+
+Copy and configure `config.client.json` and start your server :
+
+    node index.js --config=/path/to/config.client.json
+
+## Configuration
+
+- **server** `boolean`: Tells the app to act as a server (`port` became required)
+- **port** `numeric`: The port to use for the server
+- **client** `boolean`: Tells the app to act as a client (`remote` became required)
+- **remote** `string`: The complete WebSocket URL where the client should attempt to connect (example: `ws://127.0.0.1:6666`)
+- **temp_path** `string`: The temporary folder to use for receiving file streams
+- **paths** `array` : list of all paths to sync
+  - **id** `string`: The id of the folder to sync (ids should match between server and client)
+  - **path** `string`: The **absolute** path of the folder to sync
+  - **only** `string`: The whitelist regex for filtering relative files paths
+  - **except** `string`: The blacklist regex for filtering relative files paths
 
 ## Tech stack
 
-- Efficient file change detection using a native C++ Node module for querying and subscribing to filesystem events. The same as [Parcel 2](https://parceljs.org/) with the [@parcel/watcher](https://www.npmjs.com/package/@parcel/watcher) package.
-- Blazing fast transfer with WebSocket client and server implementation [ws](https://www.npmjs.com/package/ws)
+- File change detection using a native C++ Node module for querying and subscribing to filesystem events. The same as [Parcel 2](https://parceljs.org/) with the [@parcel/watcher](https://www.npmjs.com/package/@parcel/watcher) package.
+- Fast transfer with WebSocket client and server implementation [ws](https://www.npmjs.com/package/ws)
 
 ## Todo List :
 
