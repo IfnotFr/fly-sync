@@ -17,6 +17,10 @@ Ideal for developers who want source code synchronization between two machines.
 
 ## Quick start
 
+Install the package globally with npm or yarn:
+- `npm global install @ifnot/fly-sync`
+- (or) `yarn add -g @ifnot/fly-sync`
+
 ### Server
 
 Copy and configure `config.server.json` and start your server :
